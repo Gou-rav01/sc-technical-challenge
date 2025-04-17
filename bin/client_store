@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require_relative '../lib/client'
+require_relative '../lib/client_model'
+require_relative '../lib/command_line_interface'
+require 'json'
+
+begin
+  clients_json_collection = JSON.parse(File.read(File.join(__dir__, '../sample_clients.json')))
+  client_model = ClientModel.new(data: clients_json_collection)
+  cli = CommandLineInterface.new(client_model:)
+  cli.start
+rescue Errno::ENOENT
+  puts 'Error: sample_clients.json file not found in the project root.'
+  exit 1
+rescue JSON::ParserError
+  puts 'Error: sample_clients.json contains invalid JSON data.'
+  exit 1
+end
