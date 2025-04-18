@@ -84,7 +84,7 @@ DEPENDENCIES
   debug (~> 1.10.0)
   rspec (~> 3.13.0)
   rubocop (~> 1.75.2)
-  rubocop-rspec
+  rubocop-rspec (~> 3.5.0)
   simplecov (~> 0.22.0)
 
 RUBY VERSION
