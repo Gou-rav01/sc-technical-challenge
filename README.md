@@ -16,7 +16,7 @@ A Ruby command-line application for managing client data, supporting partial nam
 
 2. **Clone the Project**:
    ```bash
-   git clone sd && cd ./
+   git clone https://github.com/Gou-rav01/sc-technical-challenge.git && cd ./sc-technical-challenge
    ```
 3. **Install Dependencies**:
    ```bash
